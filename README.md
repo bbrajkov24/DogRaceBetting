@@ -51,3 +51,4 @@ To run the simulation:
 
 **SQLite** is used for data persistence.
 Player (wallet) data was transitioned from in-memory storage to the database to ensure synchronized access and persistence across both applications.
+Note that all data (races, bets, and players) is cleared and reinitialized each time **`RaceManager`** starts.
