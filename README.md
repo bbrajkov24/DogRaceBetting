@@ -29,11 +29,11 @@ The solution is composed of three main parts:
         * View their historical bets and overall betting results.
     * Reads and writes player data (including wallet balances) from the shared SQLite database.
 
-## Key Features
+## Data Persistence
 
-* **Automated Race Simulation:** Races are automatically generated and progressed by the `RaceManager`.
-* **Real-time Betting:** Players can place bets on upcoming races.
-* **Persistent Data Storage:** All race, bet, and player data is stored persistently in an SQLite database.
+* **SQLite** is used for data persistence.
+* Player (wallet) data was transitioned from in-memory storage to the database to ensure synchronized access and persistence across both applications.
+* Note that all data (races, bets, and players) is cleared and reinitialized each time **`RaceManager`** starts.
 
 ## Getting Started
 
@@ -46,9 +46,3 @@ To run the simulation:
 
 3.  **Start `PlayerClient`:**`
     * The Player Client will connect to the same SQLite database and allow you to interact with the simulation.
-
-## Data Persistence
-
-* **SQLite** is used for data persistence.
-* Player (wallet) data was transitioned from in-memory storage to the database to ensure synchronized access and persistence across both applications.
-* Note that all data (races, bets, and players) is cleared and reinitialized each time **`RaceManager`** starts.
