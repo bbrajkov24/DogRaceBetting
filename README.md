@@ -6,7 +6,7 @@ This project implements a console-based dog race betting simulation, demonstrati
 
 The solution is composed of three main parts:
 
-* **`DogRace.Application` (Class Library):**
+* **`DogRace` (Class Library):**
     * Contains the core business logic and services for managing races, bets, and players.
     * Includes interfaces and their implementations for various functionalities, such as `IRaceService`, `IBetService`, and `IPlayerService`.
     * Defines the domain models (`Race`, `Bet`, `Player`, `RaceParticipant`, etc.) and their behaviors.
@@ -33,15 +33,13 @@ The solution is composed of three main parts:
 
 * **Automated Race Simulation:** Races are automatically generated and progressed by the `RaceManager`.
 * **Real-time Betting:** Players can place bets on upcoming races.
-* **Diverse Bet Types:** Supports different betting strategies (e.g., Win Bet).
-* **Wallet Management:** Players have an in-game wallet for managing their funds.
 * **Persistent Data Storage:** All race, bet, and player data is stored persistently in an SQLite database.
 
 ## Getting Started
 
 To run the simulation:
 
-1.  **Build the Solution:** Ensure all projects (`DogRace.Application`, `RaceManager`, `PlayerClient`) are built successfully.
+1.  **Build the Solution:** Ensure all projects (`DogRace`, `RaceManager`, `PlayerClient`) are built successfully.
 
 2.  **Start `RaceManager`:**
     * The Race Manager will initialize the SQLite database and begin creating and simulating races. **It is crucial to run this application first.**
